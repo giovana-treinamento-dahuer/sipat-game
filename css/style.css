@@ -117,7 +117,7 @@ body {
 
 @media screen and (max-width: 90vh) {
     .jump {
-        animation: jump 2s ease-out;
+        animation: jump 4s ease-out;
     }
 
 }
