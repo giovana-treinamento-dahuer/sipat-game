@@ -83,7 +83,7 @@ body {
 }
 
 .jump {
-    animation: jump 900ms ease-out;
+    animation: jump 1s ease-out;
 }
 
 .clouds {
@@ -111,7 +111,7 @@ body {
         bottom: 0;
     }
     40% {
-        bottom: 80vh;
+        bottom: 90vh;
     }
 }
 
