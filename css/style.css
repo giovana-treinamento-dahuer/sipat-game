@@ -97,15 +97,6 @@ body {
     animation: none;
 }
 
-@keyframes jump {
-    0%, 100% {
-        bottom: 0;
-    }
-    40% {
-        bottom: 90vh;
-    }
-}
-
 @keyframes clouds {
     from {
         right: -400px;
@@ -115,16 +106,25 @@ body {
     }
 }
 
-@media screen and (max-width: 90vh) {
+@keyframes jump {
+    0%, 100% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 90vh;
+    }
+}
+
+/* Regra de mídia para telas menores */
+@media screen and (max-width: 600px) {
     .jump {
         animation: jump 2s ease-out;
     }
-
 }
 
-@media screen and (min-width: 50vh) and (max-width: 90vh) {
+/* Regra de mídia para telas maiores, mas ainda menores que 90% da altura da tela */
+@media screen and (min-width: 601px) and (max-width: 90%) {
     .jump {
         animation: jump 4s ease-out;
     }
-
 }
