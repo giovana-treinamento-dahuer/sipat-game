@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/botao.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script defer src="../js/script.js"></script>
+    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <title>Aninha Jump</title>
+</head>
+
+<body>
+
+    <div class="game-board">
+        <img src="" class="clouds" id="clouds">
+        <form class="placar">
+            <span style="z-index: 1">Player:
+                <span class="player"></span>
+            </span>
+            <span style="z-index: 1">Score:
+                <span class="timer"></span>
+            </span>
+            <div class="lives">Vidas: <span class="lives-count">3</span></div>
+        </form>
+        <img src="../images/mario.gif" class="mario">
+    </div>
+    <footer class="foreground">
+        <img src="../images/foreground.png">    
+    </footer>
+    <script>
+        // Lista de URLs das imagens
+        var images = [
+            '../images/n1.png',
+            '../images/n2.png',
+            '../images/n3.png',
+        ];
+
+        function changeImage() {
+            var randomIndex = Math.floor(Math.random() * images.length);
+            var randomImage = images[randomIndex];
+            document.getElementById('clouds').src = randomImage;
+        }
+
+        changeImage();
+
+        setInterval(changeImage, 20000);
+    </script>
+
+</body>
+
+</html>
