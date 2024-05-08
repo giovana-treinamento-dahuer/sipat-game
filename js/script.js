@@ -327,7 +327,7 @@ const checkEndGame = () => {
                             innerHTML: `A pontuação mais alta é: ${maxScore}.`
                         }
                     },
-                    customClass: {
+                    className: {
                         container: 'custom-swal-container',
                         title: 'custom-swal-title',
                         content: 'custom-swal-content',
