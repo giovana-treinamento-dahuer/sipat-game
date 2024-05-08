@@ -89,18 +89,18 @@ function createPipe() {
 
     // Defina as dimensões das tubulações e caixas com base na altura da tela
     const screenHeight = window.innerHeight;
-    const pipeWidth = screenHeight * 0.1; // 10% da altura da tela
-    const pipeHeight = screenHeight * 0.2; // 20% da altura da tela
+    const pipeWidth = screenHeight * 0.08;
+    const pipeHeight = screenHeight * 0.15;
 
     if (pipeSprite === '../images/pipe.png') {
-        newPipe.style.width = `${pipeWidth}px`; // Largura fixa para a imagem de tubulação
-        newPipe.style.height = `${pipeHeight}px`; // Altura fixa para a imagem de tubulação
+        newPipe.style.width = `${pipeWidth}px`;
+        newPipe.style.height = `${pipeHeight}px`;
     } else if (pipeSprite === '../images/caixas.png') {
-        newPipe.style.width = `${pipeWidth * 0.6}px`; // Largura proporcional para a imagem de caixas
-        newPipe.style.height = `${pipeHeight * 0.6}px`; // Altura proporcional para a imagem de caixas
+        newPipe.style.width = `${pipeWidth * 0.6}px`;
+        newPipe.style.height = `${pipeHeight * 0.6}px`;
     }
 
-    newPipe.style.left = '1000px'; // Posição inicial à direita da tela
+    newPipe.style.left = '1000px';
     document.querySelector('.game-board').appendChild(newPipe);
     pipes.push(newPipe);
     movePipe(newPipe);
