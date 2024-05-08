@@ -315,12 +315,16 @@ const checkEndGame = () => {
                 swal({
                     title: "Game Over",
                     text: "Deseja tentar mais uma vez?",
-                    width: "400px",
-                    heigth: "400px",
                     icon: "../images/animacao2.gif",
                     buttons: true,
                     closeOnClickOutside: false,
                     closeOnEsc: false,
+                    content: {
+                        element: "p",
+                        attributes: {
+                            innerHTML: `Sua pontuação é: ${currentScore}.`
+                        }
+                    },
                     content: {
                         element: "p",
                         attributes: {
