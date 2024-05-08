@@ -98,6 +98,43 @@ body {
     animation: none;
 }
 
+.swal-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.swal-modal {
+    width: 80vw; /* Defina a largura do swal em relação à largura da viewport */
+    max-width: 400px; /* Defina uma largura máxima */
+    background-color: #fff; /* Cor de fundo */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.swal-title {
+    font-size: 1.5em; /* Tamanho do título */
+    color: #333; /* Cor do texto */
+}
+
+.swal-text {
+    font-size: 1.2em; /* Tamanho do texto */
+    color: #666; /* Cor do texto */
+}
+
+.swal-button {
+    font-size: 1.2em; /* Tamanho do botão */
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 10px; /* Margem */
+    cursor: pointer; /* Cursor ao passar por cima */
+}
+
+.swal-button:hover {
+    background-color: #45a049; /* Cor de fundo do botão ao passar por cima */
+}
+
 @keyframes clouds {
     from {
         right: -400px;
