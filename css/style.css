@@ -115,14 +115,12 @@ body {
     }
 }
 
-/* Regra de mídia para telas menores */
 @media screen and (max-width: 600px) {
     .jump {
         animation: jump 2s ease-out;
     }
 }
 
-/* Regra de mídia para telas maiores, mas ainda menores que 90% da altura da tela */
 @media screen and (min-width: 601px) and (max-width: 90%) {
     .jump {
         animation: jump 4s ease-out;
