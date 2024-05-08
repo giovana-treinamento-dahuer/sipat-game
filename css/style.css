@@ -132,7 +132,7 @@ body {
     color: #fff; /* Cor do texto do botão */
     border: none; /* Sem borda */
     border-radius: 5px; /* Cantos arredondados */
-    padding: 10px 20px; /* Espaçamento interno */
+    padding: 30px 40px; /* Espaçamento interno */
     margin: 10px; /* Margem */
     cursor: pointer; /* Cursor ao passar por cima */
 }
