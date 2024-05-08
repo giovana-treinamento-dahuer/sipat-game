@@ -88,8 +88,8 @@ function createPipe() {
     newPipe.classList.add('pipeTransition');
 
     const screenHeight = window.innerHeight;
-    const pipeWidth = screenHeight * 0.1;
-    const pipeHeight = screenHeight * 0.1;
+    const pipeWidth = screenHeight * 0.05;
+    const pipeHeight = screenHeight * 0.05;
 
     if (pipeSprite === '../images/pipe.png') {
         newPipe.style.width = `${pipeWidth}px`;
