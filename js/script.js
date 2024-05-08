@@ -89,7 +89,7 @@ function createPipe() {
 
     const screenHeight = window.innerHeight;
     const pipeWidth = screenHeight * 0.1;
-    const pipeHeight = screenHeight * 0.2;
+    const pipeHeight = screenHeight * 0.1;
 
     if (pipeSprite === '../images/pipe.png') {
         newPipe.style.width = `${pipeWidth}px`;
