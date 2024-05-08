@@ -331,13 +331,7 @@ const checkEndGame = () => {
                             innerHTML: `A pontuação mais alta é: ${maxScore}.`
                         }
                     },
-                    className: {
-                        container: 'custom-swal-container',
-                        title: 'custom-swal-title',
-                        content: 'custom-swal-content',
-                        confirmButton: 'custom-swal-button',
-                        cancelButton: 'custom-swal-button'
-                    },
+                    className: 'custom-swal-container custom-swal-title custom-swal-content custom-swal-button',
                 }).then((willDelete) => {
                     if (willDelete) {
                         window.location = '../pages/game.html';
