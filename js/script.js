@@ -87,14 +87,20 @@ function createPipe() {
     newPipe.classList.add('pipe');
     newPipe.classList.add('pipeTransition');
 
+    // Defina as dimensões das tubulações e caixas com base na altura da tela
+    const screenHeight = window.innerHeight;
+    const pipeWidth = screenHeight * 0.1; // 10% da altura da tela
+    const pipeHeight = screenHeight * 0.2; // 20% da altura da tela
+
     if (pipeSprite === '../images/pipe.png') {
-        newPipe.style.width = '250px';
+        newPipe.style.width = `${pipeWidth}px`; // Largura fixa para a imagem de tubulação
+        newPipe.style.height = `${pipeHeight}px`; // Altura fixa para a imagem de tubulação
     } else if (pipeSprite === '../images/caixas.png') {
-        newPipe.style.width = '170px';
-        newPipe.style.height = '170px';
+        newPipe.style.width = `${pipeWidth * 0.6}px`; // Largura proporcional para a imagem de caixas
+        newPipe.style.height = `${pipeHeight * 0.6}px`; // Altura proporcional para a imagem de caixas
     }
 
-    newPipe.style.left = '1000px';
+    newPipe.style.left = '1000px'; // Posição inicial à direita da tela
     document.querySelector('.game-board').appendChild(newPipe);
     pipes.push(newPipe);
     movePipe(newPipe);
