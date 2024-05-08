@@ -87,7 +87,6 @@ function createPipe() {
     newPipe.classList.add('pipe');
     newPipe.classList.add('pipeTransition');
 
-    // Defina as dimensões das tubulações e caixas com base na altura da tela
     const screenHeight = window.innerHeight;
     const pipeWidth = screenHeight * 0.08;
     const pipeHeight = screenHeight * 0.15;

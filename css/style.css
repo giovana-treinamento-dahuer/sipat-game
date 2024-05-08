@@ -7,6 +7,43 @@
     font-family: 'Press Start 2P', cursive;
 }
 
+.swal-overlay {
+    background-color: transparent;
+}
+
+.swal-modal {
+    width: 80vw; /* Defina a largura do swal em relação à largura da viewport */
+    max-width: 400px; /* Defina uma largura máxima */
+    background-color: #fff; /* Cor de fundo */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.swal-title {
+    font-size: 1.5em; /* Tamanho do título */
+    color: #333; /* Cor do texto */
+}
+
+.swal-text {
+    font-size: 1.2em; /* Tamanho do texto */
+    color: #666; /* Cor do texto */
+}
+
+.swal-button {
+    font-size: 1.2em; /* Tamanho do botão */
+    background-color: #4CAF50; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 10px; /* Margem */
+    cursor: pointer; /* Cursor ao passar por cima */
+}
+
+.swal-button:hover {
+    background-color: #45a049; /* Cor de fundo do botão ao passar por cima */
+}
+
 body {
     background-color: #9F01AE;
     position: relative;
@@ -21,7 +58,7 @@ body {
 
 .foreground{
     position: absolute;
-    bottom: -137px;
+    bottom: -13.7vh; /* Alterado para unidades de viewport */
     width: 100%;
     height: auto;
     max-width: 100%;
@@ -30,12 +67,12 @@ body {
 .placar {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 2vh; /* Alterado para unidades de viewport */
     color: white;
 }
 
 .placar h3 {
-    width: 100px;
+    width: 10vw; /* Alterado para unidades de viewport */
     color: rgb(168, 20, 20);
 }
 
@@ -61,8 +98,8 @@ body {
 .coin {
     position: absolute;
     bottom: 0;
-    width: 100px;
-    height: 100px;
+    width: 10vw; /* Alterado para unidades de viewport */
+    height: 10vw; /* Alterado para unidades de viewport */
 }
 
 .coinsTransition {
@@ -76,21 +113,21 @@ body {
 }
 
 .mario {
-    width: 180px;
-    height: 180px;
+    width: 18vw; /* Alterado para unidades de viewport */
+    height: 18vw; /* Alterado para unidades de viewport */
     position: absolute;
-    bottom: 0px;
+    bottom: 0;
 }
 
 .jump {
-    animation: jump 800ms ease-out;
+    animation: jump 0.8s ease-out; /* Alterado para 0.8 segundos */
 }
 
 .clouds {
-    width: 400px;
+    width: 40vw; /* Alterado para unidades de viewport */
     position: absolute;
     animation: clouds 20s infinite linear;
-    margin-top: 40px;
+    margin-top: 4vh; /* Alterado para unidades de viewport */
 }
 
 .clouds-stop {
@@ -99,7 +136,7 @@ body {
 
 @keyframes clouds {
     from {
-        right: -400px;
+        right: -40vw; /* Alterado para unidades de viewport */
     }
     to {
         right: 100%;
@@ -121,7 +158,7 @@ body {
     }
 }
 
-@media screen and (min-width: 601px) and (max-width: 90%) {
+@media screen and (min-width: 601px) and (max-width: 900px) {
     .jump {
         animation: jump 4s ease-out;
     }
