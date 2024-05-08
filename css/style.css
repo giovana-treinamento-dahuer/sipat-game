@@ -104,11 +104,10 @@ body {
 }
 
 .swal-modal {
-    width: 80vw; /* Defina a largura do swal em relação à largura da viewport */
+    width: 50vw; /* Defina a largura do swal em relação à largura da viewport */
     max-width: 400px; /* Defina uma largura máxima */
     background-color: #fff; /* Cor de fundo */
     border-radius: 10px; /* Cantos arredondados */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra */
     display: flex;
     flex-direction: column; /* Alinha o título e o texto verticalmente */
     align-items: center; /* Alinha o título e o texto horizontalmente */
