@@ -87,11 +87,16 @@ function createPipe() {
     newPipe.classList.add('pipe');
     newPipe.classList.add('pipeTransition');
 
+    const screenHeight = window.innerHeight;
+    const pipeWidth = screenHeight * 0.08;
+    const pipeHeight = screenHeight * 0.15;
+
     if (pipeSprite === '../images/pipe.png') {
-        newPipe.style.width = '250px';
+        newPipe.style.width = `${pipeWidth}px`;
+        newPipe.style.height = `${pipeHeight}px`;
     } else if (pipeSprite === '../images/caixas.png') {
-        newPipe.style.width = '170px';
-        newPipe.style.height = '170px';
+        newPipe.style.width = `${pipeWidth * 0.6}px`;
+        newPipe.style.height = `${pipeHeight * 0.6}px`;
     }
 
     newPipe.style.left = '1000px';
