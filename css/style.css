@@ -58,7 +58,7 @@ body {
 
 .foreground{
     position: absolute;
-    bottom: -13.7vh; /* Alterado para unidades de viewport */
+    bottom: -13.7vh;
     width: 100%;
     height: auto;
     max-width: 100%;
@@ -98,8 +98,8 @@ body {
 .coin {
     position: absolute;
     bottom: 0;
-    width: 10vw; /* Alterado para unidades de viewport */
-    height: 10vw; /* Alterado para unidades de viewport */
+    width: 10vw;
+    height: 10vw;
 }
 
 .coinsTransition {
@@ -113,21 +113,21 @@ body {
 }
 
 .mario {
-    width: 18vw; /* Alterado para unidades de viewport */
-    height: 18vw; /* Alterado para unidades de viewport */
+    width: 18vw;
+    height: 18vw;
     position: absolute;
     bottom: 0;
 }
 
 .jump {
-    animation: jump 0.8s ease-out; /* Alterado para 0.8 segundos */
+    animation: jump 0.8s ease-out;
 }
 
 .clouds {
-    width: 40vw; /* Alterado para unidades de viewport */
+    width: 40vw;
     position: absolute;
     animation: clouds 20s infinite linear;
-    margin-top: 4vh; /* Alterado para unidades de viewport */
+    margin-top: 4vh;
 }
 
 .clouds-stop {
@@ -136,7 +136,7 @@ body {
 
 @keyframes clouds {
     from {
-        right: -40vw; /* Alterado para unidades de viewport */
+        right: -40vw;
     }
     to {
         right: 100%;
