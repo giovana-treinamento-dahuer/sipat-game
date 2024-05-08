@@ -322,12 +322,6 @@ const checkEndGame = () => {
                     content: {
                         element: "p",
                         attributes: {
-                            innerHTML: `Sua pontuação é: ${currentScore}.`
-                        }
-                    },
-                    content: {
-                        element: "p",
-                        attributes: {
                             innerHTML: `A pontuação mais alta é: ${maxScore}.`
                         }
                     },
