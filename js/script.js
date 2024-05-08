@@ -88,10 +88,10 @@ function createPipe() {
     newPipe.classList.add('pipeTransition');
 
     if (pipeSprite === '../images/pipe.png') {
-        newPipe.style.width = '15%';
+        newPipe.style.width = '250px';
     } else if (pipeSprite === '../images/caixas.png') {
-        newPipe.style.width = '10%';
-        newPipe.style.height = '22%';
+        newPipe.style.width = '170px';
+        newPipe.style.height = '170px';
     }
 
     newPipe.style.left = '1000px';
