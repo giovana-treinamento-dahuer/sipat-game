@@ -325,7 +325,6 @@ const checkEndGame = () => {
                             innerHTML: `A pontuação mais alta é: ${maxScore}.`
                         }
                     },
-                    className: 'custom-swal-container custom-swal-title custom-swal-content custom-swal-button',
                 }).then((willDelete) => {
                     if (willDelete) {
                         window.location = '../pages/game.html';
@@ -333,6 +332,10 @@ const checkEndGame = () => {
                         window.location = '../index.html';
                     }
                 });
+                document.querySelector('.swal-popup').classList.add('custom-swal-container');
+                document.querySelector('.swal-title').classList.add('custom-swal-title');
+                document.querySelector('.swal-text').classList.add('custom-swal-content');
+                document.querySelector('.swal-button').classList.add('custom-swal-button');
             }, 200);
         })
         .catch(error => {
