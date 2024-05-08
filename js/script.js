@@ -315,7 +315,7 @@ const checkEndGame = () => {
                 swal({
                     title: "Game Over",
                     text: "Deseja tentar mais uma vez?",
-                    icon: "../images/animacao2.gif",
+                    icon: "../images/quedanimacao.gif",
                     buttons: true,
                     closeOnClickOutside: false,
                     closeOnEsc: false,
@@ -325,6 +325,12 @@ const checkEndGame = () => {
                             innerHTML: `A pontuação mais alta é: ${maxScore}.`
                         }
                     },
+                    didOpen: () => {
+                        document.querySelector('.swal-popup').classList.add('custom-swal-container');
+                        document.querySelector('.swal-title').classList.add('custom-swal-title');
+                        document.querySelector('.swal-text').classList.add('custom-swal-content');
+                        document.querySelector('.swal-button').classList.add('custom-swal-button');
+                    }
                 }).then((willDelete) => {
                     if (willDelete) {
                         window.location = '../pages/game.html';
@@ -332,10 +338,6 @@ const checkEndGame = () => {
                         window.location = '../index.html';
                     }
                 });
-                document.querySelector('.swal-popup').classList.add('custom-swal-container');
-                document.querySelector('.swal-title').classList.add('custom-swal-title');
-                document.querySelector('.swal-text').classList.add('custom-swal-content');
-                document.querySelector('.swal-button').classList.add('custom-swal-button');
             }, 200);
         })
         .catch(error => {
