@@ -291,7 +291,7 @@ const checkEndGame = () => {
 
     setTimeout(() => {
         mario.src = "../images/animacao2.gif";
-    }, 1500);
+    }, 1000);
 });
 
     if (pipes.length > 0) {
