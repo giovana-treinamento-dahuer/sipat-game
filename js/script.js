@@ -87,18 +87,11 @@ function createPipe() {
     newPipe.classList.add('pipe');
     newPipe.classList.add('pipeTransition');
 
-    const gameBoardWidth = document.querySelector('.game-board').offsetWidth;
-    const gameBoardHeight = document.querySelector('.game-board').offsetHeight;
-
-    const pipeWidth = gameBoardWidth * 0.6;
-    const pipeHeight = gameBoardHeight * 0.7;
-
     if (pipeSprite === '../images/pipe.png') {
-        newPipe.style.width = `${pipeWidth}px`;
-        newPipe.style.height = `${pipeHeight}px`;
+        newPipe.style.width = '250px';
     } else if (pipeSprite === '../images/caixas.png') {
-        newPipe.style.width = `${pipeWidth * 0.7}px`;
-        newPipe.style.height = `${pipeHeight * 0.7}px`;
+        newPipe.style.width = '170px';
+        newPipe.style.height = '170px';
     }
 
     newPipe.style.left = '1000px';
