@@ -112,12 +112,12 @@ body {
 
 .swal-title {
     font-size: 1.5em; /* Tamanho do título */
-    color: #333; /* Cor do texto */
+    color: #4B0082; /* Cor do texto */
 }
 
 .swal-text {
     font-size: 1.2em; /* Tamanho do texto */
-    color: #666; /* Cor do texto */
+    color: #4B0082; /* Cor do texto */
 }
 
 .swal-button {
