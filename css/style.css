@@ -122,17 +122,13 @@ body {
 
 .swal-button {
     font-size: 1.2em; /* Tamanho do botão */
-    background-color: #4CAF50; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
+    background-color: #4B0082; /* Cor de fundo do botão */
+    color: #FFFAFA; /* Cor do texto do botão */
     border: none; /* Sem borda */
-    border-radius: 5px; /* Cantos arredondados */
-    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 2px; /* Cantos arredondados */
+    padding: 20px 30px; /* Espaçamento interno */
     margin: 10px; /* Margem */
     cursor: pointer; /* Cursor ao passar por cima */
-}
-
-.swal-button:hover {
-    background-color: #45a049; /* Cor de fundo do botão ao passar por cima */
 }
 
 @keyframes clouds {
