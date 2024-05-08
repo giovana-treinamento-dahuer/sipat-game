@@ -90,8 +90,8 @@ function createPipe() {
     const gameBoardWidth = document.querySelector('.game-board').offsetWidth;
     const gameBoardHeight = document.querySelector('.game-board').offsetHeight;
 
-    const pipeWidth = gameBoardWidth * 0.5;
-    const pipeHeight = gameBoardHeight * 0.5;
+    const pipeWidth = gameBoardWidth * 0.9;
+    const pipeHeight = gameBoardHeight * 0.9;
 
     if (pipeSprite === '../images/pipe.png') {
         newPipe.style.width = `${pipeWidth}px`;
