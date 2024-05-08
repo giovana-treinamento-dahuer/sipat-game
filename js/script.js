@@ -284,11 +284,15 @@ function sendDataToFirebase(player, score) {
 
 const checkEndGame = () => {
     pipes.forEach(pipe => {
-        pipe.classList.remove('pipeTransition');
-        mario.src = "../images/quedanimacao.gif";
-        mario.style.width = "300px";
-        mario.style.height = "300px";
-    });
+    pipe.classList.remove('pipeTransition');
+    mario.src = "../images/quedanimacao.gif";
+    mario.style.width = "300px";
+    mario.style.height = "300px";
+
+    setTimeout(() => {
+        mario.src = "../images/animacao2.gif";
+    }, 2000);
+});
 
     if (pipes.length > 0) {
         clearInterval(loop);
@@ -311,7 +315,7 @@ const checkEndGame = () => {
                 swal({
                     title: "Game Over",
                     text: "Deseja tentar mais uma vez?",
-                    icon: "../images/quedanimacao.gif",
+                    icon: "../images/animacao2.gif",
                     buttons: true,
                     closeOnClickOutside: false,
                     closeOnEsc: false,

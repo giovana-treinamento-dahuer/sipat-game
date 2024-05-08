@@ -97,14 +97,6 @@ body {
     animation: none;
 }
 
-.swal-modal {
-    width: 50vw; /* Defina a largura do swal em relação à largura da viewport */
-    max-width: 400px; /* Defina uma largura máxima */
-    background-color: #fff; /* Cor de fundo */
-    border-radius: 20px; /* Cantos arredondados */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra */
-}
-
 @keyframes clouds {
     from {
         right: -400px;
