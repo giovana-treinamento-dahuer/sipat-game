@@ -315,7 +315,7 @@ const checkEndGame = () => {
                 swal({
                     title: "Game Over",
                     text: "Deseja tentar mais uma vez?",
-                    icon: "../images/quedanimacao.gif",
+                    icon: "../images/animacao2.gif",
                     buttons: true,
                     closeOnClickOutside: false,
                     closeOnEsc: false,

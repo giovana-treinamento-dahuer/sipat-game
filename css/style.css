@@ -98,13 +98,9 @@ body {
     animation: none;
 }
 
-/* Estilo para o swal */
-.swal-overlay {
-    background-color: transparent;
-}
-
-.swal-modal {
+.custom-swal-container {
     width: 50vw; /* Defina a largura do swal em relação à largura da viewport */
+    height: 40vw;
     max-width: 400px; /* Defina uma largura máxima */
     background-color: #fff; /* Cor de fundo */
     border-radius: 10px; /* Cantos arredondados */
@@ -113,19 +109,19 @@ body {
     align-items: center; /* Alinha o título e o texto horizontalmente */
 }
 
-.swal-title {
+.custom-swal-title {
     font-size: 1.5em; /* Tamanho do título */
     color: #333; /* Cor do texto */
     margin-top: 20px; /* Espaço entre o topo do swal e o título */
 }
 
-.swal-text {
+.custom-swal-content {
     font-size: 1.2em; /* Tamanho do texto */
     color: #666; /* Cor do texto */
     margin-bottom: 20px; /* Espaço entre o texto e os botões */
 }
 
-.swal-button {
+.custom-swal-button {
     font-size: 1.2em; /* Tamanho do botão */
     background-color: #4CAF50; /* Cor de fundo do botão */
     color: #fff; /* Cor do texto do botão */
@@ -134,10 +130,6 @@ body {
     padding: 30px 40px; /* Espaçamento interno */
     margin: 10px; /* Margem */
     cursor: pointer; /* Cursor ao passar por cima */
-}
-
-.swal-button:hover {
-    background-color: #45a049; /* Cor de fundo do botão ao passar por cima */
 }
 
 @keyframes clouds {
