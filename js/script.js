@@ -323,7 +323,7 @@ const checkEndGame = () => {
                     content: {
                         element: "p",
                         attributes: {
-                            innerHTML: `<p>Sua pontuação atual é: ${currentScore}.<br>A pontuação mais alta é: ${maxScore}.</p>`
+                            innerHTML: `<p style="margin-bottom: 10px;">Sua pontuação atual é: ${currentScore}.<br>A pontuação mais alta é: ${maxScore}.</p>`
                         }
                     },
                 }).then((willDelete) => {
