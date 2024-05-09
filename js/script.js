@@ -90,7 +90,7 @@ function createPipe() {
 
     if (pipeSprite === '../images/pipe.png') {
         newPipe.style.width = '250px';
-    } else if (pipeSprite === '../images/caixas.png') {
+    } else if (pipeSprite === '../images/box1.png') {
         newPipe.style.width = '170px';
         newPipe.style.height = '170px';
     }
