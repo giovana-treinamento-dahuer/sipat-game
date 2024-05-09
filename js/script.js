@@ -13,6 +13,7 @@ let lives = 3;
 let isColliding = false;
 let initialSpeed = 1;
 let incrementSpeed = 0.1;
+let currentScore = 0;
 
 const jump = () => {
     mario.classList.add('jump');
@@ -213,14 +214,14 @@ const loop = setInterval(() => {
 
 const startTimer = () => {
     this.loop = setInterval(() => {
-        const currentScore = +timer.innerHTML;
-        timer.innerHTML = currentScore + 100
-    }, 3500)
+        currentScore = +=100;
+        timer.innerHTML = currentScore;
+    }, 3500);
 }
 
 function addScore(points) {
-    const currentScore = +timer.innerHTML;
-    timer.innerHTML = currentScore + points;
+    currentScore += points;
+    timer.innerHTML = currentScore;
 }
 
 const startGame = () => {
