@@ -89,10 +89,10 @@ function createPipe() {
     newPipe.classList.add('pipeTransition');
 
     if (pipeSprite === '../images/pipe.png') {
-        newPipe.style.width = '250px';
+        newPipe.style.width = '25vw';
     } else if (pipeSprite === '../images/box1.png') {
-        newPipe.style.width = '170px';
-        newPipe.style.height = '170px';
+        newPipe.style.width = '17vw';
+        newPipe.style.height = '17vw';
     }
 
     newPipe.style.left = '1000px';
@@ -287,8 +287,8 @@ const checkEndGame = () => {
     pipes.forEach(pipe => {
     pipe.classList.remove('pipeTransition');
     mario.src = "../images/quedanimacao.gif";
-    mario.style.width = "300px";
-    mario.style.height = "300px";
+    mario.style.width = "30vw";
+    mario.style.height = "30vw";
 
     setTimeout(() => {
         mario.src = "../images/animacao2.gif";

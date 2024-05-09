@@ -22,7 +22,7 @@ body {
 
 .foreground{
     position: absolute;
-    bottom: -137px;
+    bottom: -137vh;
     width: 100%;
     height: auto;
     max-width: 100%;
@@ -31,12 +31,12 @@ body {
 .placar {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    margin: 2vh;
     color: white;
 }
 
 .placar h3 {
-    width: 100px;
+    width: 10vw;
     color: rgb(168, 20, 20);
 }
 
@@ -62,8 +62,8 @@ body {
 .coin {
     position: absolute;
     bottom: 0;
-    width: 100px;
-    height: 100px;
+    width: 10vw;
+    height: 10vw;
 }
 
 .coinsTransition {
@@ -77,8 +77,8 @@ body {
 }
 
 .mario {
-    width: 180px;
-    height: 180px;
+    width: 18vw;
+    height: 18vw;
     position: absolute;
     bottom: 0px;
 }
@@ -88,10 +88,10 @@ body {
 }
 
 .clouds {
-    width: 400px;
+    width: 40vw;
     position: absolute;
     animation: clouds 20s infinite linear;
-    margin-top: 40px;
+    margin-top: 4vh;
 }
 
 .clouds-stop {
@@ -100,7 +100,7 @@ body {
 
 @keyframes clouds {
     from {
-        right: -400px;
+        right: -40vw;
     }
     to {
         right: 100%;
