@@ -214,7 +214,7 @@ const loop = setInterval(() => {
 
 const startTimer = () => {
     this.loop = setInterval(() => {
-        currentScore = +=100;
+        currentScore +=100;
         timer.innerHTML = currentScore;
     }, 3500);
 }
