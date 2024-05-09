@@ -316,9 +316,10 @@ const checkEndGame = () => {
                     title: "Game Over",
                     text: "Deseja tentar mais uma vez?",
                     //icon: "../images/animacao2.gif",
+                    imageUrl: "url(../animacao2.gif)",
+                    imageWidth: 400,
+                    imageHeight: 200,
                     buttons: true,
-                    width: 20,
-                    height: 20,
                     closeOnClickOutside: false,
                     closeOnEsc: false,
                     content: {
