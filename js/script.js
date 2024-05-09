@@ -287,8 +287,8 @@ const checkEndGame = () => {
     pipes.forEach(pipe => {
     pipe.classList.remove('pipeTransition');
     mario.src = "../images/quedanimacao.gif";
-    mario.style.width = "30vw";
-    mario.style.height = "30vw";
+    mario.style.width = "25vw";
+    mario.style.height = "25vw";
 
     setTimeout(() => {
         mario.src = "../images/animacao2.gif";
