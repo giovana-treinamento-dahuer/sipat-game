@@ -316,9 +316,6 @@ const checkEndGame = () => {
                     title: "Game Over",
                     text: "Deseja tentar mais uma vez?",
                     //icon: "../images/animacao2.gif",
-                    imageUrl: "url(../animacao2.gif)",
-                    imageWidth: 400,
-                    imageHeight: 200,
                     buttons: true,
                     closeOnClickOutside: false,
                     closeOnEsc: false,
@@ -328,12 +325,6 @@ const checkEndGame = () => {
                             innerHTML: `<p>A pontuação mais alta é: ${maxScore}.</p>`
                         }
                     },
-                    didOpen: () => {
-                        document.querySelector('.swal-popup').classList.add('custom-swal-container');
-                        document.querySelector('.swal-title').classList.add('custom-swal-title');
-                        document.querySelector('.swal-text').classList.add('custom-swal-content');
-                        document.querySelector('.swal-button').classList.add('custom-swal-button');
-                    }
                 }).then((willDelete) => {
                     if (willDelete) {
                         window.location = '../pages/game.html';
