@@ -95,7 +95,7 @@ function createPipe() {
         newPipe.style.height = '17vw';
     }
 
-    newPipe.style.left = '150vw';
+    newPipe.style.left = '300vw';
     document.querySelector('.game-board').appendChild(newPipe);
     pipes.push(newPipe);
     movePipe(newPipe);
