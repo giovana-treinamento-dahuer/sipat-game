@@ -1,5 +1,5 @@
 const mario = document.querySelector('.mario');
-const pipeimage = ["../images/pipe.png", "../images/caixas.png"];
+const pipeimage = ["../images/pipe.png", "../images/box1.png"];
 const player = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 const clouds = document.querySelector('.clouds');
