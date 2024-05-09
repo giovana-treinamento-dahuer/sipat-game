@@ -22,7 +22,7 @@ body {
 
 .foreground{
     position: absolute;
-    bottom: -137vh;
+    bottom: -137px;
     width: 100%;
     height: auto;
     max-width: 100%;
