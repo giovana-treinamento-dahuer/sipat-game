@@ -213,8 +213,8 @@ const loop = setInterval(() => {
 
 const startTimer = () => {
     this.loop = setInterval(() => {
-        const currentTimer = +timer.innerHTML;
-        timer.innerHTML = currentTimer + 100
+        const currentScore = +timer.innerHTML;
+        timer.innerHTML = currentScore + 100
     }, 3500)
 }
 
@@ -322,7 +322,7 @@ const checkEndGame = () => {
                     content: {
                         element: "p",
                         attributes: {
-                            innerHTML: `<p>A pontuação mais alta é: ${maxScore}.</p>`
+                            innerHTML: `<p>Sua pontuação atual é: ${currentScore}.<br>A pontuação mais alta é: ${maxScore}.</p>`
                         }
                     },
                 }).then((willDelete) => {
