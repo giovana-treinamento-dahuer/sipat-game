@@ -11,7 +11,7 @@ let pipeCreationInterval = 3000;
 let coinCreationInterval = 3000;
 let lives = 3;
 let isColliding = false;
-let initialSpeed = 1;
+let initialSpeed = 0.8;
 let incrementSpeed = 0.1;
 let currentScore = 0;
 
