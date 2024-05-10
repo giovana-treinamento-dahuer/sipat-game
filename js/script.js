@@ -89,7 +89,7 @@ function createPipe() {
     newPipe.classList.add('pipeTransition');
 
     if (pipeSprite === '../images/pipe.png') {
-        newPipe.style.width = '16vw';
+        newPipe.style.width = '17vw';
     } else if (pipeSprite === '../images/box1.png') {
         newPipe.style.width = '12vw';
         newPipe.style.height = '12vw';
