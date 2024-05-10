@@ -89,13 +89,13 @@ function createPipe() {
     newPipe.classList.add('pipeTransition');
 
     if (pipeSprite === '../images/pipe.png') {
-        newPipe.style.width = '20vw';
+        newPipe.style.width = '15vw';
     } else if (pipeSprite === '../images/box1.png') {
         newPipe.style.width = '10vw';
         newPipe.style.height = '10vw';
     }
 
-    newPipe.style.left = '300vw';
+    newPipe.style.left = '100vw';
     document.querySelector('.game-board').appendChild(newPipe);
     pipes.push(newPipe);
     movePipe(newPipe);
