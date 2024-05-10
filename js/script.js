@@ -3,7 +3,7 @@ const pipeimage = ["../images/pipe.png", "../images/box1.png"];
 const player = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 const clouds = document.querySelector('.clouds');
-const coinsImage = ["../images/bota.png", "../images/capacete.png", "../images/extintor.png", "../images/protetor-solar-facial-clareador.png"];
+const coinsImage = ["../images/bota.png", "../images/capacete.png", "../images/extintor.png"];
 let coins = [];
 let pipes = [];
 let gameActive = true;
@@ -43,18 +43,17 @@ function createCoin() {
     let newCoin = document.createElement('img');
     let coinSprite = coinsImage[Math.floor(Math.random() * coinsImage.length)];
     newCoin.src = coinSprite;
-    newCoin.classList.add('coin'); // Classe para a moeda
-    newCoin.classList.add('coinsTransition'); // Classe para transição (opcional)
+    newCoin.classList.add('coin');
+    newCoin.classList.add('coinsTransition');
 
-    // Define uma posição horizontal fixa e uma posição vertical aleatória dentro do .game-board
-    let fixedX = 900; // Posição horizontal fixa
-    let gameBoardHeight = document.querySelector('.game-board').clientHeight; // Altura do .game-board
-    let randomY = Math.floor(Math.random() * (gameBoardHeight - 80)); // Posição vertical aleatória
-    newCoin.style.left = fixedX + 'px'; // Define a posição horizontal
-    newCoin.style.top = randomY + 'px'; // Define a posição vertical
+    let fixedX = 900;
+    let gameBoardHeight = document.querySelector('.game-board').clientHeight;
+    let randomY = Math.floor(Math.random() * (gameBoardHeight - 80));
+    newCoin.style.left = fixedX + 'px';
+    newCoin.style.top = randomY + 'px';
 
     document.querySelector('.game-board').appendChild(newCoin);
-    coins.push(newCoin); // Adiciona a nova moeda à matriz de moedas
+    coins.push(newCoin);
 }
 
 function moveCoin(coin) {
