@@ -62,8 +62,8 @@ body {
 .coin {
     position: absolute;
     bottom: 0;
-    width: 10vw;
-    height: 10vw;
+    width: 5vw;
+    height: 5vw;
 }
 
 .coinsTransition {
@@ -77,8 +77,8 @@ body {
 }
 
 .mario {
-    width: 15vw;
-    height: 15vw;
+    width: 10vw;
+    height: 10vw;
     position: absolute;
     bottom: 0px;
 }
@@ -88,7 +88,7 @@ body {
 }
 
 .clouds {
-    width: 40vw;
+    width: 30vw;
     position: absolute;
     animation: clouds 20s infinite linear;
     margin-top: 4vh;
