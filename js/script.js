@@ -189,6 +189,7 @@ function checkCollision() {
 
 function playCollisionSound() {
     const collisionSound = new Audio('../music/boxcrash.mp3');
+    collisionSound.volume = 0.5;
     collisionSound.play();
 }
 
