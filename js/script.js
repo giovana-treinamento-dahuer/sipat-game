@@ -14,11 +14,6 @@ let isColliding = false;
 let initialSpeed = 0.8;
 let incrementSpeed = 0.1;
 let currentScore = 0;
-const backgroundMusic = document.getElementById("backgroundMusic");
-
-function playMusic() {
-    //backgroundMusic.play();
-}
 
 const jump = () => {
     mario.classList.add('jump');
@@ -189,7 +184,7 @@ function checkCollision() {
 
 function playCollisionSound() {
     const collisionSound = new Audio('../music/metal-hit-cartoon.mp3');
-    collisionSound.volume = 0.1;
+    collisionSound.volume = 0.2;
     collisionSound.play();
 }
 
@@ -319,16 +314,19 @@ const checkEndGame = () => {
 
     const scoresRef = firebase.database().ref('scores');
     scoresRef.once('value')
-        .then(snapshot => {
-            let scoresList = [];
-            snapshot.forEach(childSnapshot => {
-                const scoreData = childSnapshot.val();
-                scoresList.push(scoreData.score);
-            });
+    .then(snapshot => {
+        let scoresList = [];
+        snapshot.forEach(childSnapshot => {
+            const scoreData = childSnapshot.val();
+            scoresList.push({ name: scoreData.name, score: scoreData.score });
+        });
 
-            scoresList.sort((a, b) => b - a);
+        scoresList.sort((a, b) => b.score - a.score);
 
-            const maxScore = scoresList.length > 0 ? scoresList[0] : 0;
+        const maxScore = scoresList.length > 0 ? scoresList[0].score : 0;
+        const playerName = scoresList.length > 0 ? scoresList[0].name : '';
+
+        });
 
             setTimeout(() => {
                 swal({
@@ -341,7 +339,7 @@ const checkEndGame = () => {
                     content: {
                         element: "p",
                         attributes: {
-                            innerHTML: `<p>Sua pontuação atual é: ${currentScore}.<br/><br/>A pontuação mais alta é: ${maxScore}.</p>`
+                            innerHTML: `<p>Sua pontuação atual é: ${currentScore}.<br/><br/>A pontuação mais alta é: ${maxScore}.</p><br/><br/>Do player: ${playerName}`
                         }
                     },
                 }).then((willDelete) => {
