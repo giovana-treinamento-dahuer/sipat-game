@@ -318,12 +318,13 @@ const checkEndGame = () => {
             let scoresList = [];
             snapshot.forEach(childSnapshot => {
                 const scoreData = childSnapshot.val();
-                scoresList.push(scoreData.score);
+                scoresList.push({ score: scoreData.score, name: scoreData.player });
             });
 
             scoresList.sort((a, b) => b - a);
 
             const maxScore = scoresList.length > 0 ? scoresList[0] : 0;
+            const playerName = scoresList.length > 0 ? scoresList[0] : '';
 
             setTimeout(() => {
                 swal({
@@ -336,7 +337,7 @@ const checkEndGame = () => {
                     content: {
                         element: "p",
                         attributes: {
-                            innerHTML: `<p>Sua pontuação atual é: ${currentScore}.<br/><br/>A pontuação mais alta é: ${maxScore}.</p>`
+                            innerHTML: `<p>Sua pontuação atual é: ${currentScore}.<br/><br/>A pontuação mais alta é: ${playerName} ${maxScore}.</p>`
                         }
                     },
                 }).then((willDelete) => {
