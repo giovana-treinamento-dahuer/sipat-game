@@ -58,8 +58,8 @@ changeImage();
 setInterval(changeImage, 20000);
 
 function checkCollisionWithPlane() {
-    const marioElement = document.querySelector('.mario');
-    console.log(marioElement); // Verifica se o elemento .mario está sendo selecionado corretamente
+    const marioElement = document.getElementById('mario');
+    console.log(marioElement); // Verifica se o elemento Mario está sendo selecionado corretamente
 
     const marioRect = marioElement.getBoundingClientRect();
     const planeRect = document.getElementById('clouds').getBoundingClientRect();
