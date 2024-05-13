@@ -314,19 +314,16 @@ const checkEndGame = () => {
 
     const scoresRef = firebase.database().ref('scores');
     scoresRef.once('value')
-    .then(snapshot => {
-        let scoresList = [];
-        snapshot.forEach(childSnapshot => {
-            const scoreData = childSnapshot.val();
-            scoresList.push({ name: scoreData.name, score: scoreData.score });
-        });
+        .then(snapshot => {
+            let scoresList = [];
+            snapshot.forEach(childSnapshot => {
+                const scoreData = childSnapshot.val();
+                scoresList.push(scoreData.score);
+            });
 
-        scoresList.sort((a, b) => b.score - a.score);
+            scoresList.sort((a, b) => b - a);
 
-        const maxScore = scoresList.length > 0 ? scoresList[0].score : 0;
-        const playerName = scoresList.length > 0 ? scoresList[0].name : '';
-
-    });
+            const maxScore = scoresList.length > 0 ? scoresList[0] : 0;
 
             setTimeout(() => {
                 swal({
@@ -339,7 +336,7 @@ const checkEndGame = () => {
                     content: {
                         element: "p",
                         attributes: {
-                            innerHTML: `<p>Sua pontuação atual é: ${currentScore}.<br/><br/>A pontuação mais alta é: ${maxScore}.</p><br/><br/>Do player: ${playerName}`
+                            innerHTML: `<p>Sua pontuação atual é: ${currentScore}.<br/><br/>A pontuação mais alta é: ${maxScore}.</p>`
                         }
                     },
                 }).then((willDelete) => {
@@ -350,7 +347,7 @@ const checkEndGame = () => {
                     }
                 });
             }, 200);
-        }
+        })
         .catch(error => {
             console.error("Error fetching max score from Firebase: ", error);
             setTimeout(() => {
