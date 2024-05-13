@@ -207,7 +207,7 @@ function checkCoinCollision() {
             coin.remove();
             coins.splice(coins.indexOf(coin), 1);
             addScore(300);
-            playCollisionCoinSound;
+            playCollisionCoinSound();
 
         }
     });
