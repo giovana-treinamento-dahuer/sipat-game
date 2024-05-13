@@ -189,7 +189,7 @@ function checkCollision() {
 
 function playCollisionSound() {
     const collisionSound = new Audio('../music/boxcrash.mp3');
-    collisionSound.volume = 0.5;
+    collisionSound.volume = 0.2;
     collisionSound.play();
 }
 
@@ -208,7 +208,6 @@ function checkCoinCollision() {
             coins.splice(coins.indexOf(coin), 1);
             addScore(300);
             playCollisionCoinSound();
-
         }
     });
 }
