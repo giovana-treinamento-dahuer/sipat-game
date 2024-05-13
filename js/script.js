@@ -17,7 +17,7 @@ let currentScore = 0;
 const backgroundMusic = document.getElementById("backgroundMusic");
 
 function playMusic() {
-    backgroundMusic.play();
+    //backgroundMusic.play();
 }
 
 const jump = () => {
