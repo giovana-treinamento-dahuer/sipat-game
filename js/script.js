@@ -207,8 +207,16 @@ function checkCoinCollision() {
             coin.remove();
             coins.splice(coins.indexOf(coin), 1);
             addScore(300);
+            playCollisionCoinSound;
+
         }
     });
+}
+
+function playCollisionCoinSound() {
+    const collisionSound = new Audio('../music/coin.mp3');
+    collisionSound.volume = 0.5;
+    collisionSound.play();
 }
 
 const loop = setInterval(() => {
