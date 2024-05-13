@@ -30,7 +30,6 @@
         <img src="../images/foreground.png">
     </footer>
     <script>
-        // Lista de URLs das imagens
         var images = [
             '../images/n1.png',
             '../images/n2.png',
@@ -46,9 +45,8 @@
             var randomImage = images[randomIndex];
             document.getElementById('clouds').src = randomImage;
 
-            // Verifica se a imagem atual é o avião
             isPlaneImage = (randomImage === '../images/aviao.png');
-            planeCollisionDetected = false;  // Resetar a colisão detectada
+            planeCollisionDetected = false;
         }
 
         changeImage();
@@ -65,21 +63,19 @@
             const marioRect = document.querySelector('.mario').getBoundingClientRect();
             const planeRect = document.getElementById('clouds').getBoundingClientRect();
 
-            // Verifica se houve colisão entre o Mario e o avião
             if (
                 marioRect.bottom >= planeRect.top &&
                 marioRect.top <= planeRect.bottom &&
                 marioRect.right >= planeRect.left &&
                 marioRect.left <= planeRect.right
             ) {
-                // Colisão detectada
                 handlePlaneCollision();
             }
         }
 
         function handlePlaneCollision() {
-            console.log('Colisão com o avião detectada');
-            planeCollisionDetected = true;  // Marca a colisão como detectada
+            planeCollisionDetected = true;
+            addScore(500);
         }
     </script>
 </body>
