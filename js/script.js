@@ -181,9 +181,15 @@ function checkCollision() {
 
     if (collided) {
         decreaseLife();
+        playCollisionSound();
     } else {
         isColliding = false;
     }
+}
+
+function playCollisionSound() {
+    const collisionSound = new Audio('../music/boxcrash.mp3');
+    collisionSound.play();
 }
 
 function checkCoinCollision() {
