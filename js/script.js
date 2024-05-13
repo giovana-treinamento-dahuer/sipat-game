@@ -386,5 +386,35 @@ function jumpOnScreenClick() {
     jump();
 }
 
+window.addEventListener("gamepadconnected", (event) => {
+    console.log("Gamepad connected:", event.gamepad);
+    startGamepadLoop();
+});
+
+window.addEventListener("gamepaddisconnected", (event) => {
+    console.log("Gamepad disconnected:", event.gamepad);
+});
+
+function startGamepadLoop() {
+    const gamepadIndex = navigator.getGamepads().findIndex(gp => gp);
+    if (gamepadIndex >= 0) {
+        requestAnimationFrame(() => gamepadLoop(gamepadIndex));
+    }
+}
+
+function gamepadLoop(gamepadIndex) {
+    const gamepad = navigator.getGamepads()[gamepadIndex];
+    if (!gamepad) return;
+
+    // Botão "A" no controle do Xbox
+    const aButtonPressed = gamepad.buttons[0].pressed;
+
+    if (aButtonPressed) {
+        jump();
+    }
+
+    requestAnimationFrame(() => gamepadLoop(gamepadIndex));
+}
+
 document.addEventListener('keydown', jump);
 document.addEventListener('click', jumpOnScreenClick);
