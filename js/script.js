@@ -326,7 +326,7 @@ const checkEndGame = () => {
         const maxScore = scoresList.length > 0 ? scoresList[0].score : 0;
         const playerName = scoresList.length > 0 ? scoresList[0].name : '';
 
-        });
+    });
 
             setTimeout(() => {
                 swal({
