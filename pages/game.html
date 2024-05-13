@@ -28,7 +28,7 @@
             </span>
             <div class="lives">Vidas: <span class="lives-count">3</span></div>
         </form>
-        <img src="../images/mario.gif" class="mario">
+        <img src="../images/mario.gif" class="mario" id="mario">
     </div>
     <footer class="foreground">
         <img src="../images/foreground.png">
@@ -36,46 +36,46 @@
     <script>
         // Lista de URLs das imagens
         var images = [
-            '../images/n1.png',
-            '../images/n2.png',
-            '../images/n3.png',
-            '../images/aviao.png',
-        ];
+    '../images/n1.png',
+    '../images/n2.png',
+    '../images/n3.png',
+    '../images/aviao.png',
+];
 
-        function changeImage() {
-            var randomIndex = Math.floor(Math.random() * images.length);
-            var randomImage = images[randomIndex];
-            document.getElementById('clouds').src = randomImage;
+function changeImage() {
+    var randomIndex = Math.floor(Math.random() * images.length);
+    var randomImage = images[randomIndex];
+    document.getElementById('clouds').src = randomImage;
 
-            // Verifica se a imagem atual é o avião
-            if (randomImage === '../images/aviao.png') {
-                checkCollisionWithPlane(); // Chama a função para verificar a colisão
-            }
-        }
+    // Verifica se a imagem atual é o avião
+    if (randomImage === '../images/aviao.png') {
+        checkCollisionWithPlane(); // Chama a função para verificar a colisão
+    }
+}
 
-        changeImage();
+changeImage();
 
-        setInterval(changeImage, 20000);
+setInterval(changeImage, 20000);
 
-        function checkCollisionWithPlane() {
-            const marioRect = document.querySelector('mario').getBoundingClientRect();
-            const planeRect = document.getElementById('clouds').getBoundingClientRect();
+function checkCollisionWithPlane() {
+    const marioRect = mario.getBoundingClientRect();
+    const planeRect = document.getElementById('clouds').getBoundingClientRect();
 
-            // Verifica se houve colisão entre o Mario e o avião
-            if (
-                marioRect.bottom >= planeRect.top &&
-                marioRect.top <= planeRect.bottom &&
-                marioRect.right >= planeRect.left &&
-                marioRect.left <= planeRect.right
-            ) {
-                // Colisão detectada
-                handlePlaneCollision();
-            }
-        }
+    // Verifica se houve colisão entre o Mario e o avião
+    if (
+        marioRect.bottom >= planeRect.top &&
+        marioRect.top <= planeRect.bottom &&
+        marioRect.right >= planeRect.left &&
+        marioRect.left <= planeRect.right
+    ) {
+        // Colisão detectada
+        handlePlaneCollision();
+    }
+}
 
-        function handlePlaneCollision() {
-            addScore(500);
-        }
+function handlePlaneCollision() {
+    addScore(500);
+}
     </script>
 
 </body>
