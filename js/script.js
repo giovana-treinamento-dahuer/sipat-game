@@ -321,7 +321,7 @@ const checkEndGame = () => {
                 scoresList.push({ score: scoreData.score, name: scoreData.player });
             });
 
-            scoresList.sort((a, b) => b - a);
+            scoresList.sort((a, b) => b.score - a.score);
 
             const maxScore = scoresList.length > 0 ? scoresList[0] : 0;
             const playerName = scoresList.length > 0 ? scoresList[0] : '';
