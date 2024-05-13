@@ -188,8 +188,8 @@ function checkCollision() {
 }
 
 function playCollisionSound() {
-    const collisionSound = new Audio('../music/boxcrash.mp3');
-    collisionSound.volume = 0.2;
+    const collisionSound = new Audio('../music/metal-hit-cartoon.mp3');
+    collisionSound.volume = 0.1;
     collisionSound.play();
 }
 
