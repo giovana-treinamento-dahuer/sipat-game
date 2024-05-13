@@ -14,6 +14,11 @@ let isColliding = false;
 let initialSpeed = 0.8;
 let incrementSpeed = 0.1;
 let currentScore = 0;
+const backgroundMusic = document.getElementById("backgroundMusic");
+
+function playMusic() {
+    backgroundMusic.play();
+}
 
 const jump = () => {
     mario.classList.add('jump');
