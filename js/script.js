@@ -350,7 +350,7 @@ const checkEndGame = () => {
                     }
                 });
             }, 200);
-        })
+        }
         .catch(error => {
             console.error("Error fetching max score from Firebase: ", error);
             setTimeout(() => {
