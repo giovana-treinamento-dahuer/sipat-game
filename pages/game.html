@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +10,9 @@
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
     <script defer src="../js/script.js"></script>
-
     <title>Aninha Jump</title>
 </head>
-
 <body>
-
     <div class="game-board">
         <img src="" class="clouds" id="clouds">
         <form class="placar">
@@ -36,53 +32,53 @@
     <script>
         // Lista de URLs das imagens
         var images = [
-    '../images/n1.png',
-    '../images/n2.png',
-    '../images/n3.png',
-    '../images/aviao.png',
-];
+            '../images/n1.png',
+            '../images/n2.png',
+            '../images/n3.png',
+            '../images/aviao.png',
+        ];
 
-function changeImage() {
-    var randomIndex = Math.floor(Math.random() * images.length);
-    var randomImage = images[randomIndex];
-    document.getElementById('clouds').src = randomImage;
+        var isPlaneImage = false;
 
-    // Verifica se a imagem atual é o avião
-    if (randomImage === '../images/aviao.png') {
-        setTimeout(() => {
-            checkCollisionWithPlane();
-        }, 16000);
-    }
-}
+        function changeImage() {
+            var randomIndex = Math.floor(Math.random() * images.length);
+            var randomImage = images[randomIndex];
+            document.getElementById('clouds').src = randomImage;
 
-changeImage();
+            // Verifica se a imagem atual é o avião
+            isPlaneImage = (randomImage === '../images/aviao.png');
+        }
 
-setInterval(changeImage, 20000);
+        changeImage();
 
-setInterval(checkCollisionWithPlane, 100);
+        setInterval(changeImage, 20000);
 
-function checkCollisionWithPlane() {
-    const marioRect = document.querySelector('.mario').getBoundingClientRect();
-    const planeRect = document.getElementById('clouds').getBoundingClientRect();
+        setInterval(() => {
+            if (isPlaneImage) {
+                checkCollisionWithPlane();
+            }
+        }, 100);
 
-    // Verifica se houve colisão entre o Mario e o avião
-    if (
-        marioRect.bottom >= planeRect.top &&
-        marioRect.top <= planeRect.bottom &&
-        marioRect.right >= planeRect.left &&
-        marioRect.left <= planeRect.right
-    ) {
-        // Colisão detectada
-        handlePlaneCollision();
-    }
-}
+        function checkCollisionWithPlane() {
+            const marioRect = document.querySelector('.mario').getBoundingClientRect();
+            const planeRect = document.getElementById('clouds').getBoundingClientRect();
 
-function handlePlaneCollision() {
-    console.log('deu boa');
-    addScore(500);
-}
+            // Verifica se houve colisão entre o Mario e o avião
+            if (
+                marioRect.bottom >= planeRect.top &&
+                marioRect.top <= planeRect.bottom &&
+                marioRect.right >= planeRect.left &&
+                marioRect.left <= planeRect.right
+            ) {
+                // Colisão detectada
+                handlePlaneCollision();
+            }
+        }
+
+        function handlePlaneCollision() {
+            console.log('deu boa');
+            addScore(500);
+        }
     </script>
-
 </body>
-
 </html>
