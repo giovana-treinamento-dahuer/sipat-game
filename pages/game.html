@@ -58,7 +58,7 @@
         setInterval(changeImage, 20000);
 
         function checkCollisionWithPlane() {
-            const marioRect = document.getElementById('mario').getBoundingClientRect(); // Ajuste aqui
+            const marioRect = document.querySelector('mario').getBoundingClientRect();
             const planeRect = document.getElementById('clouds').getBoundingClientRect();
 
             // Verifica se houve colisão entre o Mario e o avião
